@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: _envConfig.appName,
       debugShowCheckedModeBanner: false,
-      initialRoute: Routes.home,
+      initialRoute: Routes.base,
       theme: FlutterBoilerplateGetxTheme.standard,
       defaultTransition: Transition.cupertino,
       getPages: AppPages.pages,
