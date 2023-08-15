@@ -13,8 +13,8 @@ class Initializer {
   static Future<void> initProd() async {
     WidgetsFlutterBinding.ensureInitialized();
     EnvConfig prodConfig = EnvConfig(
-      appName: "",
-      baseUrl: "",
+      appName: '',
+      baseUrl: '',
     );
 
     BuildConfig.instantiate(
@@ -29,8 +29,8 @@ class Initializer {
   static Future<void> initDev() async {
     WidgetsFlutterBinding.ensureInitialized();
     EnvConfig devConfig = EnvConfig(
-      appName: "",
-      baseUrl: "",
+      appName: '',
+      baseUrl: '',
     );
 
     BuildConfig.instantiate(
@@ -45,8 +45,8 @@ class Initializer {
   static Future<void> initStaging() async {
     WidgetsFlutterBinding.ensureInitialized();
     EnvConfig stagingConfig = EnvConfig(
-      appName: "",
-      baseUrl: "",
+      appName: '',
+      baseUrl: '',
     );
 
     BuildConfig.instantiate(

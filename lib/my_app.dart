@@ -1,5 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 
 // Package imports:
 import 'package:get/get.dart';
@@ -26,8 +27,14 @@ class MyApp extends StatelessWidget {
       theme: FlutterBoilerplateGetxTheme.standard,
       defaultTransition: Transition.cupertino,
       getPages: AppPages.pages,
-      locale: const Locale('en', 'US'),
       smartManagement: SmartManagement.full,
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: AppTranslation.supportedLocales,
+      locale: AppTranslation.supportedLocales.first,
       translationsKeys: AppTranslation.translations,
     );
   }

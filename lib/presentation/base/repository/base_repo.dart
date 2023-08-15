@@ -1,3 +1,5 @@
+import 'package:either_dart/either.dart';
+
 abstract class BaseRepo {
-  getUserDetails(String userId);
+  Future<Either<int, String>> getUserDetails(String userId);
 }
