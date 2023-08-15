@@ -1,5 +1,7 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
 
+// Project imports:
 import 'colors.dart';
 import 'typography/text_styles.dart';
 
@@ -11,8 +13,8 @@ class FlutterBoilerplateGetxTheme {
   /// Standard `ThemeData` for FlutterBoilerplateGetx UI.
   static ThemeData get standard {
     return ThemeData(
-      colorScheme:
-          ColorScheme.fromSwatch(accentColor: FlutterBoilerplateGetxColors.primary),
+      colorScheme: ColorScheme.fromSwatch(
+          accentColor: FlutterBoilerplateGetxColors.primary),
       appBarTheme: _appBarTheme,
       elevatedButtonTheme: _elevatedButtonTheme,
       outlinedButtonTheme: _outlinedButtonTheme,
@@ -43,106 +45,106 @@ class FlutterBoilerplateGetxTheme {
 
   static TextTheme get _textTheme {
     return TextTheme(
-      headline1: FlutterBoilerplateGetxTextStyle.headline1,
-      headline2: FlutterBoilerplateGetxTextStyle.headline2,
-      headline3: FlutterBoilerplateGetxTextStyle.headline3,
-      headline4: FlutterBoilerplateGetxTextStyle.headline4,
-      headline5: FlutterBoilerplateGetxTextStyle.headline5,
-      headline6: FlutterBoilerplateGetxTextStyle.headline6,
-      subtitle1: FlutterBoilerplateGetxTextStyle.subtitle1,
-      subtitle2: FlutterBoilerplateGetxTextStyle.subtitle2,
-      bodyText1: FlutterBoilerplateGetxTextStyle.bodyText1,
-      bodyText2: FlutterBoilerplateGetxTextStyle.bodyText2,
-      caption: FlutterBoilerplateGetxTextStyle.caption,
-      overline: FlutterBoilerplateGetxTextStyle.overline,
-      button: FlutterBoilerplateGetxTextStyle.button,
+      displayLarge: FlutterBoilerplateGetxTextStyle.headline1,
+      displayMedium: FlutterBoilerplateGetxTextStyle.headline2,
+      displaySmall: FlutterBoilerplateGetxTextStyle.headline3,
+      headlineMedium: FlutterBoilerplateGetxTextStyle.headline4,
+      headlineSmall: FlutterBoilerplateGetxTextStyle.headline5,
+      titleLarge: FlutterBoilerplateGetxTextStyle.headline6,
+      titleMedium: FlutterBoilerplateGetxTextStyle.subtitle1,
+      titleSmall: FlutterBoilerplateGetxTextStyle.subtitle2,
+      bodyLarge: FlutterBoilerplateGetxTextStyle.bodyText1,
+      bodyMedium: FlutterBoilerplateGetxTextStyle.bodyText2,
+      bodySmall: FlutterBoilerplateGetxTextStyle.caption,
+      labelSmall: FlutterBoilerplateGetxTextStyle.overline,
+      labelLarge: FlutterBoilerplateGetxTextStyle.button,
     );
   }
 
   static TextTheme get _smallTextTheme {
     return TextTheme(
-      headline1: FlutterBoilerplateGetxTextStyle.headline1.copyWith(
-        fontSize: _textTheme.headline1!.fontSize! * _smallTextScaleFactor,
+      displayLarge: FlutterBoilerplateGetxTextStyle.headline1.copyWith(
+        fontSize: _textTheme.displayLarge!.fontSize! * _smallTextScaleFactor,
       ),
-      headline2: FlutterBoilerplateGetxTextStyle.headline2.copyWith(
-        fontSize: _textTheme.headline2!.fontSize! * _smallTextScaleFactor,
+      displayMedium: FlutterBoilerplateGetxTextStyle.headline2.copyWith(
+        fontSize: _textTheme.displayMedium!.fontSize! * _smallTextScaleFactor,
       ),
-      headline3: FlutterBoilerplateGetxTextStyle.headline3.copyWith(
-        fontSize: _textTheme.headline3!.fontSize! * _smallTextScaleFactor,
+      displaySmall: FlutterBoilerplateGetxTextStyle.headline3.copyWith(
+        fontSize: _textTheme.displaySmall!.fontSize! * _smallTextScaleFactor,
       ),
-      headline4: FlutterBoilerplateGetxTextStyle.headline4.copyWith(
-        fontSize: _textTheme.headline4!.fontSize! * _smallTextScaleFactor,
+      headlineMedium: FlutterBoilerplateGetxTextStyle.headline4.copyWith(
+        fontSize: _textTheme.headlineMedium!.fontSize! * _smallTextScaleFactor,
       ),
-      headline5: FlutterBoilerplateGetxTextStyle.headline5.copyWith(
-        fontSize: _textTheme.headline5!.fontSize! * _smallTextScaleFactor,
+      headlineSmall: FlutterBoilerplateGetxTextStyle.headline5.copyWith(
+        fontSize: _textTheme.headlineSmall!.fontSize! * _smallTextScaleFactor,
       ),
-      headline6: FlutterBoilerplateGetxTextStyle.headline6.copyWith(
-        fontSize: _textTheme.headline6!.fontSize! * _smallTextScaleFactor,
+      titleLarge: FlutterBoilerplateGetxTextStyle.headline6.copyWith(
+        fontSize: _textTheme.titleLarge!.fontSize! * _smallTextScaleFactor,
       ),
-      subtitle1: FlutterBoilerplateGetxTextStyle.subtitle1.copyWith(
-        fontSize: _textTheme.subtitle1!.fontSize! * _smallTextScaleFactor,
+      titleMedium: FlutterBoilerplateGetxTextStyle.subtitle1.copyWith(
+        fontSize: _textTheme.titleMedium!.fontSize! * _smallTextScaleFactor,
       ),
-      subtitle2: FlutterBoilerplateGetxTextStyle.subtitle2.copyWith(
-        fontSize: _textTheme.subtitle2!.fontSize! * _smallTextScaleFactor,
+      titleSmall: FlutterBoilerplateGetxTextStyle.subtitle2.copyWith(
+        fontSize: _textTheme.titleSmall!.fontSize! * _smallTextScaleFactor,
       ),
-      bodyText1: FlutterBoilerplateGetxTextStyle.bodyText1.copyWith(
-        fontSize: _textTheme.bodyText1!.fontSize! * _smallTextScaleFactor,
+      bodyLarge: FlutterBoilerplateGetxTextStyle.bodyText1.copyWith(
+        fontSize: _textTheme.bodyLarge!.fontSize! * _smallTextScaleFactor,
       ),
-      bodyText2: FlutterBoilerplateGetxTextStyle.bodyText2.copyWith(
-        fontSize: _textTheme.bodyText2!.fontSize! * _smallTextScaleFactor,
+      bodyMedium: FlutterBoilerplateGetxTextStyle.bodyText2.copyWith(
+        fontSize: _textTheme.bodyMedium!.fontSize! * _smallTextScaleFactor,
       ),
-      caption: FlutterBoilerplateGetxTextStyle.caption.copyWith(
-        fontSize: _textTheme.caption!.fontSize! * _smallTextScaleFactor,
+      bodySmall: FlutterBoilerplateGetxTextStyle.caption.copyWith(
+        fontSize: _textTheme.bodySmall!.fontSize! * _smallTextScaleFactor,
       ),
-      overline: FlutterBoilerplateGetxTextStyle.overline.copyWith(
-        fontSize: _textTheme.overline!.fontSize! * _smallTextScaleFactor,
+      labelSmall: FlutterBoilerplateGetxTextStyle.overline.copyWith(
+        fontSize: _textTheme.labelSmall!.fontSize! * _smallTextScaleFactor,
       ),
-      button: FlutterBoilerplateGetxTextStyle.button.copyWith(
-        fontSize: _textTheme.button!.fontSize! * _smallTextScaleFactor,
+      labelLarge: FlutterBoilerplateGetxTextStyle.button.copyWith(
+        fontSize: _textTheme.labelLarge!.fontSize! * _smallTextScaleFactor,
       ),
     );
   }
 
   static TextTheme get _largeTextTheme {
     return TextTheme(
-      headline1: FlutterBoilerplateGetxTextStyle.headline1.copyWith(
-        fontSize: _textTheme.headline1!.fontSize! * _largeTextScaleFactor,
+      displayLarge: FlutterBoilerplateGetxTextStyle.headline1.copyWith(
+        fontSize: _textTheme.displayLarge!.fontSize! * _largeTextScaleFactor,
       ),
-      headline2: FlutterBoilerplateGetxTextStyle.headline2.copyWith(
-        fontSize: _textTheme.headline2!.fontSize! * _largeTextScaleFactor,
+      displayMedium: FlutterBoilerplateGetxTextStyle.headline2.copyWith(
+        fontSize: _textTheme.displayMedium!.fontSize! * _largeTextScaleFactor,
       ),
-      headline3: FlutterBoilerplateGetxTextStyle.headline3.copyWith(
-        fontSize: _textTheme.headline3!.fontSize! * _largeTextScaleFactor,
+      displaySmall: FlutterBoilerplateGetxTextStyle.headline3.copyWith(
+        fontSize: _textTheme.displaySmall!.fontSize! * _largeTextScaleFactor,
       ),
-      headline4: FlutterBoilerplateGetxTextStyle.headline4.copyWith(
-        fontSize: _textTheme.headline4!.fontSize! * _largeTextScaleFactor,
+      headlineMedium: FlutterBoilerplateGetxTextStyle.headline4.copyWith(
+        fontSize: _textTheme.headlineMedium!.fontSize! * _largeTextScaleFactor,
       ),
-      headline5: FlutterBoilerplateGetxTextStyle.headline5.copyWith(
-        fontSize: _textTheme.headline5!.fontSize! * _largeTextScaleFactor,
+      headlineSmall: FlutterBoilerplateGetxTextStyle.headline5.copyWith(
+        fontSize: _textTheme.headlineSmall!.fontSize! * _largeTextScaleFactor,
       ),
-      headline6: FlutterBoilerplateGetxTextStyle.headline6.copyWith(
-        fontSize: _textTheme.headline6!.fontSize! * _largeTextScaleFactor,
+      titleLarge: FlutterBoilerplateGetxTextStyle.headline6.copyWith(
+        fontSize: _textTheme.titleLarge!.fontSize! * _largeTextScaleFactor,
       ),
-      subtitle1: FlutterBoilerplateGetxTextStyle.subtitle1.copyWith(
-        fontSize: _textTheme.subtitle1!.fontSize! * _largeTextScaleFactor,
+      titleMedium: FlutterBoilerplateGetxTextStyle.subtitle1.copyWith(
+        fontSize: _textTheme.titleMedium!.fontSize! * _largeTextScaleFactor,
       ),
-      subtitle2: FlutterBoilerplateGetxTextStyle.subtitle2.copyWith(
-        fontSize: _textTheme.subtitle2!.fontSize! * _largeTextScaleFactor,
+      titleSmall: FlutterBoilerplateGetxTextStyle.subtitle2.copyWith(
+        fontSize: _textTheme.titleSmall!.fontSize! * _largeTextScaleFactor,
       ),
-      bodyText1: FlutterBoilerplateGetxTextStyle.bodyText1.copyWith(
-        fontSize: _textTheme.bodyText1!.fontSize! * _largeTextScaleFactor,
+      bodyLarge: FlutterBoilerplateGetxTextStyle.bodyText1.copyWith(
+        fontSize: _textTheme.bodyLarge!.fontSize! * _largeTextScaleFactor,
       ),
-      bodyText2: FlutterBoilerplateGetxTextStyle.bodyText2.copyWith(
-        fontSize: _textTheme.bodyText2!.fontSize! * _largeTextScaleFactor,
+      bodyMedium: FlutterBoilerplateGetxTextStyle.bodyText2.copyWith(
+        fontSize: _textTheme.bodyMedium!.fontSize! * _largeTextScaleFactor,
       ),
-      caption: FlutterBoilerplateGetxTextStyle.caption.copyWith(
-        fontSize: _textTheme.caption!.fontSize! * _largeTextScaleFactor,
+      bodySmall: FlutterBoilerplateGetxTextStyle.caption.copyWith(
+        fontSize: _textTheme.bodySmall!.fontSize! * _largeTextScaleFactor,
       ),
-      overline: FlutterBoilerplateGetxTextStyle.overline.copyWith(
-        fontSize: _textTheme.overline!.fontSize! * _largeTextScaleFactor,
+      labelSmall: FlutterBoilerplateGetxTextStyle.overline.copyWith(
+        fontSize: _textTheme.labelSmall!.fontSize! * _largeTextScaleFactor,
       ),
-      button: FlutterBoilerplateGetxTextStyle.button.copyWith(
-        fontSize: _textTheme.button!.fontSize! * _largeTextScaleFactor,
+      labelLarge: FlutterBoilerplateGetxTextStyle.button.copyWith(
+        fontSize: _textTheme.labelLarge!.fontSize! * _largeTextScaleFactor,
       ),
     );
   }
@@ -155,10 +157,10 @@ class FlutterBoilerplateGetxTheme {
     return ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         elevation: 0,
+        backgroundColor: FlutterBoilerplateGetxColors.primary,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(30)),
         ),
-        primary: FlutterBoilerplateGetxColors.primary,
         fixedSize: const Size(208, 54),
       ),
     );
@@ -167,11 +169,12 @@ class FlutterBoilerplateGetxTheme {
   static OutlinedButtonThemeData get _outlinedButtonTheme {
     return OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
+        foregroundColor: FlutterBoilerplateGetxColors.white,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(30)),
         ),
-        side: const BorderSide(color: FlutterBoilerplateGetxColors.white, width: 2),
-        primary: FlutterBoilerplateGetxColors.white,
+        side: const BorderSide(
+            color: FlutterBoilerplateGetxColors.white, width: 2),
         fixedSize: const Size(208, 54),
       ),
     );

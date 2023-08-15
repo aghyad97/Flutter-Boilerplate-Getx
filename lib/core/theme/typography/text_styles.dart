@@ -1,6 +1,9 @@
+// Flutter imports:
+import 'package:flutter/widgets.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate_getx/core/theme/colors.dart';
 import '../../../../core/theme/typography/typography.dart';
-import 'package:flutter/widgets.dart';
 
 /// FlutterBoilerplateGetx Text Style Definitions
 class FlutterBoilerplateGetxTextStyle {

@@ -1,15 +1,18 @@
-
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate_getx/core/navigation/app_pages.dart';
-import 'package:flutter_boilerplate_getx/core/translations/translations.dart';
+
+// Package imports:
 import 'package:get/get.dart';
 
+// Project imports:
+import 'package:flutter_boilerplate_getx/core/navigation/app_pages.dart';
+import 'package:flutter_boilerplate_getx/core/translations/translations.dart';
 import 'core/theme/theme.dart';
 import 'flavors/build_config.dart';
 import 'flavors/env_config.dart';
 
 class MyApp extends StatelessWidget {
-  static final  EnvConfig _envConfig = BuildConfig.instance.config;
+  static final EnvConfig _envConfig = BuildConfig.instance.config;
 
   const MyApp({super.key});
 

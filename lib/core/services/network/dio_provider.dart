@@ -1,7 +1,9 @@
+// Package imports:
 import 'package:dio/dio.dart';
+
+// Project imports:
 import 'package:flutter_boilerplate_getx/flavors/build_config.dart';
 import 'package:flutter_boilerplate_getx/flavors/environment.dart';
-
 import 'pretty_dio_logger.dart';
 import 'request_headers.dart';
 

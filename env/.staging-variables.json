@@ -1,0 +1,5 @@
+{
+  "APP_NAME_STAGING": "Example",
+  "APP_SUFFIX_STAGING": ".staging",
+  "BASE_URL_STAGING": "https://staging.example.com/"
+}

@@ -43,6 +43,15 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
+    signingConfigs {
+        release {
+            storeFile rootProject.file("upload-keystore.jks")
+            storePassword localProperties.getProperty('flutter.storePassword')
+            keyAlias "upload"
+            keyPassword localProperties.getProperty('flutter.keyPassword')
+        }
+    }
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.flutter_boilerplate_getx"

@@ -1,9 +1,12 @@
+// Dart imports:
 import 'dart:async';
 import 'dart:io';
 
+// Package imports:
 import 'package:dio/dio.dart';
-import 'package:flutter_boilerplate_getx/flavors/build_config.dart';
 
+// Project imports:
+import 'package:flutter_boilerplate_getx/flavors/build_config.dart';
 import 'exceptions/api_exception.dart';
 import 'exceptions/app_exception.dart';
 import 'exceptions/network_exception.dart';

@@ -1,5 +1,8 @@
-import 'package:flutter_boilerplate_getx/presentation/base_page/base_page.dart';
+// Package imports:
 import 'package:get/get.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate_getx/presentation/base/base_page.dart';
 
 part './app_routes.dart';
 

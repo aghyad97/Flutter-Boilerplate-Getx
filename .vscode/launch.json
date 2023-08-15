@@ -1,0 +1,68 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dev app (debug mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "toolArgs": ["--dart-define-from-file", "/env/.dev-variables.json"]
+    },
+    {
+      "name": "Dev app (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile",
+      "toolArgs": ["--dart-define-from-file", "/env/.dev-variables.json"]
+    },
+    {
+      "name": "Dev app (release mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release",
+      "toolArgs": ["--dart-define-from-file", "/env/.dev-variables.json"]
+    },
+    {
+      "name": "Staging App (debug mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+
+      "toolArgs": ["--dart-define-from-file", "/env/.staging-variables.json"]
+    },
+    {
+      "name": "Staging App (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile",
+      "toolArgs": ["--dart-define-from-file", "/env/.staging-variables.json"]
+    },
+    {
+      "name": "Staging App (release mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release",
+      "toolArgs": ["--dart-define-from-file", "/env/.staging-variables.json"]
+    },
+    {
+      "name": "Prod app (debug mode)",
+      "request": "launch",
+      "type": "dart",
+      "toolArgs": ["--dart-define-from-file", "/env/.prod-variables.json"]
+    },
+    {
+      "name": "Prod app (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile",
+      "toolArgs": ["--dart-define-from-file", "/env/.prod-variables.json"]
+    },
+    {
+      "name": "Prod app (release mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release",
+      "toolArgs": ["--dart-define-from-file", "/env/.prod-variables.json"]
+    }
+  ]
+}

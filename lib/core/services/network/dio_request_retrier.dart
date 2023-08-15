@@ -1,6 +1,7 @@
+// Package imports:
 import 'package:dio/dio.dart';
-import 'package:get/get.dart' as getx;
 
+// Project imports:
 import 'dio_provider.dart';
 
 class DioRequestRetrier {

@@ -1,3 +1,4 @@
+// Project imports:
 import 'en_US.dart';
 
 abstract class AppTranslation {

@@ -1,5 +1,8 @@
-import 'package:flutter_boilerplate_getx/core/contracts/screen.dart';
+// Package imports:
 import 'package:get/get.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate_getx/core/contracts/screen.dart';
 
 abstract class Page extends GetPage {
   late final String coreName;

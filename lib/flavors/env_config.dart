@@ -1,7 +1,8 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate_getx/core/values/constants.dart';
+// Package imports:
 import 'package:logger/logger.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate_getx/core/values/constants.dart';
 
 class EnvConfig {
   final String appName;
@@ -30,6 +31,5 @@ class EnvConfig {
           printTime: false // Should each log print contain a timestamp
           ),
     );
-  
   }
 }

@@ -1,0 +1,54 @@
+workflows:
+  android-workflow:
+    name: Android Workflow
+    instance_type: mac_mini_m1
+    max_build_duration: 120
+    environment:
+      # groups:
+      #   - google_credentials # <-- (Includes GCLOUD_KEY_FILE, GOOGLE_CREDENTIALS)
+      # vars:
+      #   FIREBASE_PROJECT: "YOUR_FIREBASE_PROJECT_NAME" # <-- Put your Firebase Project Name here
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+    scripts:
+      - name: Set up debug.keystore
+        script: |
+          rm -f ~/.android/debug.keystore
+          keytool -genkeypair -alias androiddebugkey -keypass android -keystore ~/.android/debug.keystore -storepass android -dname 'CN=Android Debug,O=Android,C=US' -keyalg 'RSA' -keysize 2048 -validity 10000
+      - name: Set up local.properties
+        script: |
+          echo "flutter.sdk=$HOME/programs/flutter" > "$CM_BUILD_DIR/android/local.properties"
+      - name: Get Flutter packages
+        script: |
+          flutter packages pub get
+      - name: Build APK with Flutter
+        script: |
+          flutter build apk --debug
+      - name: Create debug and test APK
+        script: |
+          set -ex
+          cd android
+          ./gradlew app:assembleAndroidTest
+          ./gradlew app:assembleDebug -Ptarget="$CM_BUILD_DIR/integration_test/app_test.dart"
+    artifacts:
+      - build/**/outputs/**/*.apk
+      - build/**/outputs/**/*.aab
+      - build/**/outputs/**/mapping.txt
+      - flutter_drive.log
+  ios-workflow:
+    name: iOS Workflow
+    instance_type: mac_mini_m1
+    environment:
+      xcode: latest
+      groups:
+        - ios_credentials
+        - gcloud_credentials
+      vars:
+        FIREBASE_PROJECT: "flutter-integration-tests"
+        BUNDLE_ID: "io.codemagic.ftlflutter"
+        TEST_BUNDLE_ID: "io.codemagic.ftlflutter.uitests.xctrunner"
+    # scripts:
+
+    artifacts:
+      - "**/ios_tests.zip"
