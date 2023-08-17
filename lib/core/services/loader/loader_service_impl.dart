@@ -16,7 +16,8 @@ class LoaderServiceImpl implements LoaderService {
 
   @override
   bool addLoader(LoaderModel loader) {
-    if (loaders.contains(loader)) {
+    if (loaders.contains(loader) ||
+        loaders.where((element) => element.id == loader.id).isNotEmpty) {
       return false;
     }
     _loaders.add(loader);

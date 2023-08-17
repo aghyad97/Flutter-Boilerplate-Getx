@@ -5,5 +5,14 @@
   "titleOtherView": "OtherView",
   "settingsTheme": "Theme",
   "settingsLanguage": "Language",
-  "settingsFontSize": "Font Size"
+  "settingsFontSize": "Font Size",
+  "appDescription": "{flutter} is Awesome",
+  "@appDescription": {
+    "placeholders": {
+      "flutter": {
+        "type": "String",
+        "example": "Flutter"
+      }
+    }
+  }
 }

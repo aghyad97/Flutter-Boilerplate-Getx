@@ -1,6 +1,7 @@
 // Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate_getx/core/helpers/random.dart';
 
 // Package imports:
 import 'package:get/get.dart';
@@ -11,6 +12,9 @@ import 'package:flutter_boilerplate_getx/presentation/base/base_page_controller.
 
 class BaseWidget extends Component<BaseController> {
   BaseWidget({super.key});
+
+  final _firstButton = getRandomString(10);
+  final _secondButton = getRandomString(10);
 
   @override
   Widget build(BuildContext context) {
@@ -28,30 +32,27 @@ class BaseWidget extends Component<BaseController> {
               Obx(() {
                 return ElevatedButton(
                     onPressed: () {
-                      controller.dummyFun('1');
+                      controller.dummyFun(_firstButton);
+                      // controller.bottomSheet();
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black26,
                     ),
-                    child:
-                        controller.loaderService.getLoaderById('1')?.visible ??
-                                false
-                            ? const CupertinoActivityIndicator()
-                            : const Text('Click me'));
+                    child: isLoading(_firstButton)
+                        ? const CupertinoActivityIndicator()
+                        : Text(controller.tr.appDescription('Flutter')));
               }),
               Obx(() {
                 return ElevatedButton(
                     onPressed: () {
-                      controller.dummyFun('2');
+                      controller.dummyFun(_secondButton);
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black26,
                     ),
-                    child:
-                        controller.loaderService.getLoaderById('2')?.visible ??
-                                false
-                            ? const CupertinoActivityIndicator()
-                            : const Text('Click me'));
+                    child: isLoading(_secondButton)
+                        ? const CupertinoActivityIndicator()
+                        : const Text('Click me'));
               }),
             ],
           ),
@@ -59,4 +60,6 @@ class BaseWidget extends Component<BaseController> {
       ),
     );
   }
+
+  isLoading(id) => controller.loaderService.getLoaderById(id)?.visible ?? false;
 }

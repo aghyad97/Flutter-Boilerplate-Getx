@@ -1,42 +1,43 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'dart:convert';
+
 /// The `LoaderModel` class represents a loader with an ID, message, visibility status, and index.
 class LoaderModel {
   String id;
   String message;
   bool visible;
-  int index;
+  String classSource;
   LoaderModel({
     required this.id,
     required this.message,
     this.visible = false,
-    required this.index,
+    required this.classSource,
   });
 
   factory LoaderModel.clone(LoaderModel loader) => LoaderModel(
         id: loader.id,
         message: loader.message,
+        classSource: loader.classSource,
         visible: loader.visible,
-        index: loader.index,
       );
 
   LoaderModel copyWith({
     String? id,
     String? message,
     bool? visible,
-    int? index,
-    DateTime? startTime,
-    Duration? minDuration,
+    String? classSource,
   }) {
     return LoaderModel(
       id: id ?? this.id,
       message: message ?? this.message,
       visible: visible ?? this.visible,
-      index: index ?? this.index,
+      classSource: classSource ?? this.classSource,
     );
   }
 
   @override
   String toString() {
-    return 'LoaderModel(id: $id, message: $message, visible: $visible, index: $index)';
+    return 'LoaderModel(id: $id, message: $message, visible: $visible, classSource: $classSource)';
   }
 
   @override
@@ -46,11 +47,37 @@ class LoaderModel {
     return other.id == id &&
         other.message == message &&
         other.visible == visible &&
-        other.index == index;
+        other.classSource == classSource;
   }
 
   @override
   int get hashCode {
-    return id.hashCode ^ message.hashCode ^ visible.hashCode ^ index.hashCode;
+    return id.hashCode ^
+        message.hashCode ^
+        visible.hashCode ^
+        classSource.hashCode;
   }
+
+  Map<String, dynamic> toMap() {
+    return <String, dynamic>{
+      'id': id,
+      'message': message,
+      'visible': visible,
+      'classSource': classSource,
+    };
+  }
+
+  factory LoaderModel.fromMap(Map<String, dynamic> map) {
+    return LoaderModel(
+      id: map['id'] as String,
+      message: map['message'] as String,
+      visible: map['visible'] as bool,
+      classSource: map['classSource'] as String,
+    );
+  }
+
+  String toJson() => json.encode(toMap());
+
+  factory LoaderModel.fromJson(String source) =>
+      LoaderModel.fromMap(json.decode(source) as Map<String, dynamic>);
 }

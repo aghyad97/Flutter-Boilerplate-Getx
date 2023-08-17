@@ -10,7 +10,7 @@ import 'package:flutter_boilerplate_getx/flavors/build_config.dart';
 abstract class Controller extends GetxController with StateMixin {
   final Logger logger = BuildConfig.instance.config.logger;
 
-  AppLocalizations get appLocalization => AppLocalizations.of(Get.context!)!;
+  AppLocalizations get tr => AppLocalizations.of(Get.context!)!;
 
   //Reload the page
   final _refreshController = false.obs;
