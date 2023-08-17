@@ -1,4 +1,5 @@
 // Package imports:
+import 'package:flutter_boilerplate_getx/core/services/haptic/haptic_service.dart';
 import 'package:get/get.dart';
 
 // Project imports:
@@ -12,6 +13,8 @@ class BaseController extends Controller with GetTickerProviderStateMixin {
 
   final loaderService = Get.find<LoaderService>();
 
+  final hapticService = Get.find<HapticService>();
+
   static BaseController to = Get.find<BaseController>();
 
   RxInt counter = 0.obs;
@@ -23,6 +26,7 @@ class BaseController extends Controller with GetTickerProviderStateMixin {
   });
 
   dummyFun(String id) async {
+    hapticService.successHaptic();
     if (loaderService.getLoaderById(id) != null) {
       return;
     }

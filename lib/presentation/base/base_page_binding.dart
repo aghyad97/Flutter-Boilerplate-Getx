@@ -1,4 +1,5 @@
 // Package imports:
+import 'package:flutter_boilerplate_getx/core/bindings/haptic_service_binding.dart';
 import 'package:get/instance_manager.dart';
 
 // Project imports:
@@ -14,6 +15,7 @@ import 'base_page_controller.dart';
 class BaseBinding extends Bindings {
   @override
   void dependencies() {
+    HapticServiceBinding().dependencies();
     LoaderServiceBinding().dependencies();
     LocalSourceBindings().dependencies();
     RemoteSourceBindings().dependencies();
