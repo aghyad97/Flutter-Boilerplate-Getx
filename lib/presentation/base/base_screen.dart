@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 // Project imports:
 import 'package:flutter_boilerplate_getx/core/contracts/screen.dart';
+import 'package:flutter_boilerplate_getx/presentation/base/widgets/base_widget.dart';
 import 'base_page_controller.dart';
 
 class BaseScreen extends Screen<BaseController> {
@@ -10,10 +11,6 @@ class BaseScreen extends Screen<BaseController> {
 
   @override
   Widget? phone() {
-    return Container(
-      color: Colors.white,
-      child: ElevatedButton(
-          onPressed: controller.dummyFun(), child: const Text("Click me")),
-    );
+    return BaseWidget();
   }
 }

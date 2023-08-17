@@ -1,8 +1,10 @@
-// Project imports:
+// Dart imports:
 import 'dart:ui';
 
+// Package imports:
 import 'package:get/get.dart';
 
+// Project imports:
 import 'en_US.dart';
 
 abstract class AppTranslation extends Translations {

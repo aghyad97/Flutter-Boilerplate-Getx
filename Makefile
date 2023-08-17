@@ -1,4 +1,4 @@
-.PHONY: all run_dev_web run_dev_mobile run_unit clean upgrade lint format build_dev_mobile help watch gen run_stg_mobile run_prd_mobile build_apk_dev build_apk_stg build_apk_prd purge 
+.PHONY: all run_dev_web run_dev_mobile run_unit clean upgrade lint format build_dev_mobile help watch gen run_stg_mobile run_prd_mobile build_apk_dev build_apk_stg build_apk_prd purge generate-tran
 
 all: lint format run_dev_mobile
 
@@ -43,6 +43,7 @@ format: ## Formats the code
 	dart format lib .
 	dart run import_sorter:main
 	dart format lib
+	dart fix --apply
 
 lint: ## Lints the code
 	echo "╠ Verifying code..."
@@ -91,3 +92,6 @@ purge: ## Purges the Flutter
 	pod deintegrate
 	flutter clean
 	flutter pub get
+
+generate-tran:
+	flutter gen-l10n

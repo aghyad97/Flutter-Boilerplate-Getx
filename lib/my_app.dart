@@ -1,8 +1,8 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 
 // Package imports:
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:get/get.dart';
 
 // Project imports:
@@ -11,6 +11,9 @@ import 'package:flutter_boilerplate_getx/core/translations/translations.dart';
 import 'core/theme/theme.dart';
 import 'flavors/build_config.dart';
 import 'flavors/env_config.dart';
+
+/// The `MyApp` class is the root widget of the application and sets up the configuration and theme for
+/// the app using GetX framework in Dart.
 
 class MyApp extends StatelessWidget {
   static final EnvConfig _envConfig = BuildConfig.instance.config;
@@ -28,14 +31,9 @@ class MyApp extends StatelessWidget {
       defaultTransition: Transition.cupertino,
       getPages: AppPages.pages,
       smartManagement: SmartManagement.full,
-      localizationsDelegates: const [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-      ],
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppTranslation.supportedLocales,
       locale: AppTranslation.supportedLocales.first,
-      translationsKeys: AppTranslation.translations,
     );
   }
 }

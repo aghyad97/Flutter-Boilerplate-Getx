@@ -1,8 +1,13 @@
+// Flutter imports:
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate_getx/presentation/base/base_page_binding.dart';
-import 'package:flutter_boilerplate_getx/presentation/base/base_page_controller.dart';
+
+// Package imports:
 import 'package:flutter_test/flutter_test.dart';
 import 'package:get/get.dart';
+
+// Project imports:
+import 'package:flutter_boilerplate_getx/presentation/base/base_page_binding.dart';
+import 'package:flutter_boilerplate_getx/presentation/base/base_page_controller.dart';
 
 void main() {
   testWidgets('MyWidget should display text', (WidgetTester tester) async {
