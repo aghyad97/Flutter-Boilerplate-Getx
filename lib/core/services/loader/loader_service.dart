@@ -18,4 +18,6 @@ abstract class LoaderService {
   int getLoaderIndexById(String id);
 
   LoaderModel? getLoaderById(String id);
+
+  bool isLoading(String id);
 }

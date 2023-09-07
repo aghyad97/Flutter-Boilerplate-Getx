@@ -63,4 +63,8 @@ class LoaderServiceImpl implements LoaderService {
   @override
   LoaderModel? getLoaderById(String id) =>
       loaders.firstWhereOrNull((element) => element.id == id);
+
+  @override
+  bool isLoading(String id) =>
+      loaders.firstWhere((element) => element.id == id).visible;
 }
