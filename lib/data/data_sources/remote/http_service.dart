@@ -3,7 +3,8 @@ import 'package:dio/dio.dart';
 import 'package:logger/logger.dart';
 
 abstract class HttpService {
-  Dio get dioClient;
+  Dio get authenticatedHttpClient;
+  Dio get httpClient;
 
   Logger get logger;
 

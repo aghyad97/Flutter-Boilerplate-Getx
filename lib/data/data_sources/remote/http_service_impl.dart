@@ -40,8 +40,11 @@ class HttpServiceImpl implements HttpService {
   }
 
   @override
-  Dio get dioClient => DioProvider.dioWithHeaderToken;
+  Dio get authenticatedHttpClient => DioProvider.dioWithHeaderToken;
 
   @override
   Logger get logger => BuildConfig.instance.config.logger;
+
+  @override
+  Dio get httpClient => DioProvider.httpDio;
 }
